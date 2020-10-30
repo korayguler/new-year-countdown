@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+body {
+  background: url('../background.jpg');
+  background-color: cornflowerblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Holtwood One SC';
+  color: #fff;
+  text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.container {
+  background-image: linear-gradient(
+    315deg,
+    rgba(#f89b9e, 0.3) 0%,
+    rgba(#96c8fb, 0.3) 30%,
+    rgba(#3ee577, 0.3) 60%,
+    rgba(#c9d9ff, 0.3) 100%
+  );
+  background-size: 500% 500%;
+  animation: animate 10s ease infinite;
+  animation-direction: alternate;
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    width: fit-content;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media only screen and (max-width: 768px) {
+      & {
+        top: -35px;
+        font-size: 25px;
+      }
+    }
+  }
+  .skeleton {
+    position: relative;
+    max-width: 620px;
+    width: 100%;
+    min-height: 180px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    transform: skewX(-8deg);
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.3);
+    @media only screen and (max-width: 768px) {
+      & {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        transform: none;
+        width: 90%;
+        height: 80vh;
+      }
+    }
+    .box {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 30px;
+      margin: 20px;
+      padding: 10px;
+      @media only screen and (max-width: 768px) {
+        & {
+          margin: 10px;
+          padding: 40px 0;
+        }
+      }
+
+      h2 {
+        font-size: 50px;
+
+        @media only screen and (max-width: 768px) {
+          & {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}
