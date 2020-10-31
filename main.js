@@ -16,11 +16,16 @@ const ui = (d, h, m, s) => {
   const minutes = document.querySelector('#minutes');
   const seconds = document.querySelector('#seconds');
 
-  days.innerText = zero(d);
-  hours.innerText = zero(h);
-  minutes.innerText = zero(m);
-  seconds.innerText = zero(s);
+  days.innerText = parseInt(zero(d));
+  hours.innerText = parseInt(zero(h));
+  minutes.innerText = parseInt(zero(m));
+  seconds.innerText = parseInt(zero(s));
 };
 
 const zero = (e) => (e < 10 ? `0${e}` : e);
+
+//init
+countdown(newYear);
+
+//timer
 setInterval(() => countdown(newYear), 1000);

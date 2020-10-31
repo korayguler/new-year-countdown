@@ -17,15 +17,18 @@ var ui = function ui(d, h, m, s) {
   var hours = document.querySelector('#hours');
   var minutes = document.querySelector('#minutes');
   var seconds = document.querySelector('#seconds');
-  days.innerText = zero(d);
-  hours.innerText = zero(h);
-  minutes.innerText = zero(m);
-  seconds.innerText = zero(s);
+  days.innerText = parseInt(zero(d));
+  hours.innerText = parseInt(zero(h));
+  minutes.innerText = parseInt(zero(m));
+  seconds.innerText = parseInt(zero(s));
 };
 
 var zero = function zero(e) {
   return e < 10 ? "0".concat(e) : e;
-};
+}; //init
+
+
+countdown(newYear); //timer
 
 setInterval(function () {
   return countdown(newYear);
