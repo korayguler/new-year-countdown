@@ -1,0 +1,23 @@
+{
+  "name": "new-year-countdown",
+  "version": "1.0.0",
+  "description": "New Year Countdown Timer",
+  "main": "main.js",
+  "scripts": {
+    "start": "tsc main.ts -w --outDir dist/ "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/korayguler/new-year-countdown.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/korayguler/new-year-countdown/issues"
+  },
+  "homepage": "https://github.com/korayguler/new-year-countdown#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
+}
